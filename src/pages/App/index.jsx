@@ -6,6 +6,7 @@ import { MyOrders } from '../MyOrders'
 import { MyOrder } from '../MyOrder'
 import { NotFound } from '../NotFound'
 import { SignIn } from '../SignIn'
+import { Navbar } from '../../components/Navbar'
 
 import './App.css'
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
+      <Navbar/>
     </BrowserRouter>
   )
 }
