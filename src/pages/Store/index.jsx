@@ -1,12 +1,14 @@
 import React from 'react';
 import { Layout } from '../../components/Layout';
+import { Card } from '../../components/Card';
 
-const MyOrder = () => {
+const Store = () => {
     return (
         <Layout>
-            MyOrder
+            Store Section
+            <Card/>
         </Layout>
     );
 }
 
-export { MyOrder };
+export { Store };

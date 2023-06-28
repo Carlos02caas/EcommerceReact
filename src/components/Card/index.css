@@ -1,0 +1,9 @@
+.container .card-img-add, .card-img-view{
+    display: none;
+}
+.container:hover .card-img .card-img-add{
+    display: flex;
+}
+.container:hover .card-img .card-img-view{
+    display: block;
+}

@@ -7,12 +7,14 @@ import { MyOrder } from '../MyOrder'
 import { NotFound } from '../NotFound'
 import { SignIn } from '../SignIn'
 import { Navbar } from '../../components/Navbar'
+import { Store } from '../Store'
 
 import './App.css'
 
 const AppRoutes = () => {
   const routes = useRoutes([
     { path: '/', element: <Home/>},
+    { path: '/store', element: <Store/>},
     { path: '/my-account', element: <MyAccount/>},
     { path: '/my-orders', element: <MyOrders/>},
     { path: '/my-order', element: <MyOrder/>},
