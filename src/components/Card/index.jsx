@@ -12,6 +12,7 @@ const Card = (data) => {
     const showProduct = (productDetail) => {
         context.openProductDetail();
         context.setProductToShow(productDetail);
+        context.closeCheckoutSideMenu();
     }
     
     return (
@@ -20,7 +21,7 @@ const Card = (data) => {
                 <img className=' w-full h-full object-cover rounded-lg' src={data.data.images[0]} alt={data.data.title} />
                 <div 
                     className='card-img-add absolute top-0 right-0 justify-center items-center bg-white w-6 h-6 rounded-full m-2 px-3 py-0.5'
-                    onClick={() => context.setCount(context.count + 1)}>
+                    onClick={(event) => context.addProductsToCart(event,data.data)}>
                     <ShoppingBagIcon className='w-4 h-4 absolute z-10 text-blue-up'/>
                 </div>
                 <div className='card-img-view absolute w-full bottom-0 pt-3 pb-3 text-center text-white bg-gray-up/70 hover:bg-gray-up/90'
