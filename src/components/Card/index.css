@@ -1,9 +1,14 @@
+
 .container .card-img-add, .card-img-view{
     display: none;
 }
 .container:hover .card-img .card-img-add{
     display: flex;
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 200ms; /* don't forget to set a duration! */
 }
 .container:hover .card-img .card-img-view{
     display: block;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 200ms; /* don't forget to set a duration! */
 }

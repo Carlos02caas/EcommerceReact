@@ -14,6 +14,7 @@ export default {
       'gray-up': '#494A4D',
       'body-text': '#212933',
       'gray-black': '#0F0F0F',
+      'blue-up':'#6979DD',
     },
     extend: {},
   },
