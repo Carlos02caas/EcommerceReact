@@ -15,6 +15,7 @@ export default {
       'body-text': '#212933',
       'gray-black': '#0F0F0F',
       'blue-up':'#6979DD',
+      'green-check': '#2EE30E',
     },
     extend: {},
   },

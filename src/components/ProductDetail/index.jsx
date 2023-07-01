@@ -10,7 +10,7 @@ const ProductDetail = () => {
     const context = useContext(ShoppingCartContext);
     return (
 
-        <aside className={`animate__animated ${context.isProductDetailOpen ? 'flex animate__fadeInRight' : 'animate__fadeOutRight hidden'} product-detail  flex-col fixed right-0 border border-gray-mid rounded-lg bg-white`}>
+        <aside className={`animate__animated ${context.isProductDetailOpen ? 'flex animate__fadeInRight' : 'animate__fadeOutRight hidden'} product-detail  flex-col fixed right-0 border border-gray-mid rounded-lg bg-white z-10`}>
             <div className="flex justify-between items-center p-6">
                 <h2 className=' font-medium text-xl '>Detail</h2>
                 <XCircleIcon className='w-7 h-7 cursor-pointer' onClick={() => context.closeProductDetail()} />
