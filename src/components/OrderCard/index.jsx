@@ -15,12 +15,16 @@ const OrderCard = props => {
                 </figure>
                 <p className='text-sm font-light'>{title}</p>
             </div>
+
             <div className='flex items-center gap-2'>
                 <p className='text-lg font-medium'>${price}</p>
-                <XMarkIcon 
+                {handleDelete && <XMarkIcon 
                     className=' w-6 h-6 text-body-text cursor-pointer'
                     onClick={() => handleDelete(id)}
-                />
+                    />
+                }
+                
+                
             </div>
         </div>
     );

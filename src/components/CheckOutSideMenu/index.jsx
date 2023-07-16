@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 
+import { Link } from 'react-router-dom'
+
 import { ShoppingCartContext } from '../../Context';
 import { XCircleIcon } from '@heroicons/react/24/outline'
 import { OrderCard } from '../OrderCard';
@@ -16,6 +18,20 @@ const CheckOutSideMenu = () => {
         context.setCartProducts(filteredProducts);
     }
 
+    const handleCheckout = () => {
+        const orderToAdd ={
+            date: '01.04.23',
+            products: context.cartProducts,
+            totalProducts:context.cartProducts.length,
+            totalPrice: totalPrice(context.cartProducts)
+        }
+
+        context.setOrder([...context.order, orderToAdd]);
+        context.setCartProducts([]);
+        context.setCount(0);
+        context.setSearchByTittle(null);
+        context.closeCheckoutSideMenu();
+    }
     return (
 
         <aside className={`animate__animated ${context.isCheckoutSideMenuOpen ? 'flex animate__fadeInRight' : 'animate__fadeOutRight hidden'} checkout-side-menu  flex-col fixed right-0 border border-gray-mid rounded-lg bg-white z-10`}>
@@ -23,7 +39,7 @@ const CheckOutSideMenu = () => {
                 <h2 className=' font-medium text-xl '>My Order</h2>
                 <XCircleIcon className='w-7 h-7 cursor-pointer' onClick={() => context.closeCheckoutSideMenu()} />
             </div>
-            <div className=' overflow-y-scroll'>
+            <div className=' overflow-y-scroll flex-1'>
                 {
                     context.cartProducts.map(product => (
                         <OrderCard 
@@ -42,6 +58,14 @@ const CheckOutSideMenu = () => {
                     <span className=' font-light'>Total:</span>
                     <span className=' font-medium text-2xl'>${totalPrice(context.cartProducts)}</span>
                 </p>
+                <Link to='/my-orders/last'>
+                    <button
+                        className='w-full text-center py-2 my-7 bg-blue-up text-white rounded-md'
+                        onClick={() => handleCheckout()}>
+                        Checkout
+                    </button>
+                </Link>
+                
             </div>
         </aside>
         

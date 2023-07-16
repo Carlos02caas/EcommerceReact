@@ -44,7 +44,7 @@ const Card = (data) => {
             <figure className='card-img relative mb-3 w-full h-4/5'>
                 <img className=' w-full h-full object-cover rounded-lg' src={data.data.images[0]} alt={data.data.title} />
                 {renderIcon(data.data.id)}
-                <div className='card-img-view absolute w-full bottom-0 pt-3 pb-3 text-center text-white bg-gray-up/70 hover:bg-gray-up/90'
+                <div className='card-img-view absolute w-full bottom-0 pt-3 pb-3 text-center text-white bg-gray-up/70 hover:bg-gray-up/90 rounded-b-lg'
                     onClick={()=> showProduct(data.data)}>
                     Vista Rapida
                 </div>
