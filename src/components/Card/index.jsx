@@ -49,7 +49,7 @@ const Card = (data) => {
                     Vista Rapida
                 </div>
             </figure>
-            <p className='flex justify-between'>
+            <p className='flex justify-between items-center'>
                 <span className=' text-gray-mid'>{data.data.category.name}</span>
                 <span>❣️</span>
             </p>
